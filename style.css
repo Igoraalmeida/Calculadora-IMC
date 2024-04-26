@@ -1,0 +1,146 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(139, 0, 253, 0.521);
+    color: rgb(0, 0, 0);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+img{
+    max-width: 100%;
+}
+.conteudo{
+    width: 75%;
+    box-shadow: 10px 5px 5px white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:rgb(255, 255, 255) ;
+    box-shadow: 0px 10px 50px 10px rgb(0, 0, 0);
+    border-radius: 10px;
+    
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    padding: 80px 0;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px;
+}
+.titulo{
+    text-align: center;
+    padding: 50px 0 0 0;
+}
+.forms-title{
+    letter-spacing: 1.5px;
+    padding: 40px 0 5px 0;
+    margin: 0;
+    padding-left: 5px;
+    font-weight: bolder;
+}
+::placeholder{
+    color: rgba(0, 0, 0, 0.589);
+}
+.forms-input{
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(213, 212, 214, 0.644);
+}
+.button{
+    margin: 40px 0px;
+    padding: 15px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(137, 43, 226, 0.753);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    transition: all .3s;
+}
+.button:hover{
+    transform: scale(1,1);
+    cursor: pointer;
+    background-color: rgb(137, 43, 226);
+    letter-spacing: 2px;
+    font-size: 19px;
+}
+.imc{
+    display: grid;
+    grid-template-areas: 
+    "imc-result msg"
+    "span msg";
+    text-align: center;
+}
+.imc h2{
+    color: rgba(137, 43, 226, 0.753);
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+#msg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    grid-area: msg;
+    width: 300px;
+    margin: auto;
+    transition: all .3s;
+}
+#imc-result{
+    grid-area: imc-result;
+    font-size: 30px;
+}
+#msg:hover{
+    font-size: 20px;
+    font-weight: bold;
+}
+#span{
+    grid-area: span;
+    font-weight: 800;
+}
+
+@media (max-width: 650px ) {
+    img{
+        display: none;
+
+    }
+    .forms{
+        padding: 0;
+    }
+    .forms-input{
+        width: 80%;
+        padding: 20px;
+        margin: auto;
+    }
+    .container{
+        padding: 40px 0;
+    }
+    .conteudo{
+        width: 90%;
+        display: inline-block;
+    }
+    .forms-title{
+        padding-left: 20px;
+    }
+    .button{
+        border-radius: 0;
+    }
+    .imc{
+        grid-template-areas: 
+        'msg'
+        'imc-result'
+        'span';
+    }
+    #imc-result{
+        padding: 20px 0 0 0;
+    }
+    #span{
+        padding: 0 0 15px 0;
+    }
+}
