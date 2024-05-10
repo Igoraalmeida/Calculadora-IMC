@@ -9,6 +9,23 @@ body{
 img{
     max-width: 100%;
 }
+.btnVoltar {
+    position: fixed;
+    padding: 1.1rem;
+    left: 92%;
+    top: 0;
+    background-color: rgba(32, 24, 24, 0.788);
+    color: rgba(213, 212, 214, 0.644);
+    border-bottom-left-radius: 50px;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: ease .4s;
+}
+.btnVoltar:hover{
+    transform: none;
+    color: white;
+}
 .conteudo{
     width: 75%;
     box-shadow: 10px 5px 5px white;
@@ -23,7 +40,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;    
-    padding: 80px 0;
+    padding: 7rem 0;
 }
 .forms{
     display: flex;
@@ -49,6 +66,17 @@ img{
     border: none;
     border-radius: 10px;
     background-color: rgba(213, 212, 214, 0.644);
+}
+.fa-weight-scale{
+    font-size: 18px;
+    top: -37px;
+    left: 87%;
+    color: rgba(137, 43, 226, 0.753);
+}
+.fa-ruler-vertical{
+    top: -35.5px;
+    left: 87.5%;
+    color: rgba(137, 43, 226, 0.753);
 }
 .button{
     margin: 40px 0px;
@@ -104,11 +132,67 @@ img{
     grid-area: span;
     font-weight: 800;
 }
+.fa-solid{
+    position:relative;
+    font-size: 18px;
+}
 
-@media (max-width: 650px ) {
+
+
+/*-----------fix btnVoltar Version-------------*/
+@media screen and (max-width: 1500px){
+    .btnVoltar{
+        left: 90%;
+    }
+}
+
+/*-----------Tablet Version-------------*/
+@media screen and (max-width: 1024px){
+    .btnVoltar{
+        left: 87%;
+    }
+    img{
+        display: none;
+    }
+    .container{
+        padding: 12rem 0;
+    }
+    .conteudo{
+        grid-template-columns: auto;
+    }
+    .forms{
+        justify-content: center;
+    }
+    .fa-weight-scale{
+        top: -36px;
+        left: 85%;
+        color: rgba(137, 43, 226, 0.753);
+    }
+    .fa-ruler-vertical{
+        top: -35px;
+        left: 86%;
+        color: rgba(137, 43, 226, 0.753);
+}
+
+/*--------Mobile Version---------*/
+@media (max-width: 720px ) {
     img{
         display: none;
 
+    }
+    .btnVoltar{
+        left: 68%;
+    }
+    .fa-weight-scale{
+        font-size: 18px;
+        top: -37px;
+        left:80%;
+        color: rgba(137, 43, 226, 0.753);
+    }
+    .fa-ruler-vertical{
+        top: -37px;
+        left:81%;
+        color: rgba(137, 43, 226, 0.753);
     }
     .forms{
         padding: 0;
