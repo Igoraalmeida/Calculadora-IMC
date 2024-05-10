@@ -9,6 +9,17 @@ body{
 img{
     max-width: 100%;
 }
+@keyframes arrowMoviment {
+    100%{
+        transform: translateX(30px);
+    }
+    50%{
+        transform: translateX(-35px); 
+    }
+    0%{
+        transform: translateX(30px);  
+    }
+}
 .btnVoltar {
     position: fixed;
     padding: 1.1rem;
@@ -25,6 +36,10 @@ img{
 .btnVoltar:hover{
     transform: none;
     color: white;
+}
+.fa-arrow-left-long{
+    animation: arrowMoviment 3s infinite;
+    
 }
 .conteudo{
     width: 75%;

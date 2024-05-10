@@ -1,3 +1,17 @@
+const btnVoltar = document.querySelector('.btnVoltar')
+
+
+
+btnVoltar.addEventListener("click", function(){
+    location.href = "https://central-ferramentas.vercel.app"
+})
+
+
+
+
+
+
+
 function calcular(){
 
     var peso = document.querySelector('#peso');
@@ -18,8 +32,6 @@ function calcular(){
     media = media.toFixed(2)
 
     imc_result.innerHTML = media
-
-    // .mask('000.000,00')
 
     if($peso <= 0 || $peso >= 350 || $peso =='' && $alt <= 0 || $alt >= 3 || $alt ==''){
         alert('Preencha os campos solicitados')
